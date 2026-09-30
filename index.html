@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olivia Canela | Portafolio de Diseño Gráfico</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- HEADER / NAVEGACIÓN -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="#" class="logo">Olivia Canela<span>.</span></a>
+            <nav class="nav-menu">
+                <a href="#proyectos">Proyectos</a>
+                <a href="#sobre-mi">Sobre mí</a>
+                <a href="#contacto" class="btn-nav">Contacto</a>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- HERO SECTION ((SOBRE MI))-->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="badge">Diseñadora Gráfica & Visual</span>
+            <h1>Diseño que comunica, inspira y deja huella.</h1>
+            <p>Especializada en diseño digital, editorial, ilustración y soluciones impresas de alta calidad.</p>
+            <div class="hero-buttons">
+                <a href="#proyectos" class="btn btn-primary">Ver Portafolio</a>
+                <a href="assets/pdf/cv_disenadora_olivia_guzman.pdf" download class="btn btn-outline" target="_blank">Descargar CV</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE PORTAFOLIO (FILTROS Y GRID DINÁMICO) -->
+    <section id="proyectos" class="portfolio-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Mis Trabajos</h2>
+                <p>Explora una selección de mis proyectos en diseño digital, identidad y artes gráficas.</p>
+            </div>
+
+            <!-- Filtros de Categorías -->
+            <div class="filter-container" id="filterContainer">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="digital">Diseño Digital</button>
+                <button class="filter-btn" data-filter="impreso">Diseño Impreso</button>
+                <button class="filter-btn" data-filter="ilustracion">Ilustración</button>
+                <button class="filter-btn" data-filter="editorial">Editorial</button>
+            </div>
+
+            <!-- Grid donde se inyectan dinámicamente los proyectos con JS -->
+            <div class="portfolio-grid" id="portfolioGrid">
+                <!-- Se llena automáticamente desde js/main.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN SOBRE MÍ -->
+    <section id="sobre-mi" class="about-section">
+        <div class="container about-grid">
+            <div class="about-text">
+                <h2>Hola, soy Olivia</h2>
+                <p>Apasionada por transformar conceptos abstractos en piezas visuales memorables. Combino la estética minimalista, la precisión técnica en preprensa y gran formato, y la sensibilidad artística para dar vida a proyectos únicos.</p>
+                
+                <div class="skills-category">
+                    <h3>Áreas de Dominio</h3>
+                    <div class="tags">
+                        <span>Ilustración</span>
+                        <span>Diseño Editorial</span>
+                        <span>Redes Sociales</span>
+                        <span>Fotografía y Edición (Foto/Video)</span>
+                        <span>Tarjetas de Presentación</span>
+                        <span>Carteles</span>
+                        <span>Páginas web</span>
+                        <span>Preprensa & Gran Formato</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-img-box">
+                <!-- Puedes cambiar la ruta de esta imagen en assets/img/ -->
+                 <img src="assets/img/olivia.png">
+                <div class="img-placeholder-card">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIGHTBOX MODAL PARA VER IMÁGENES A DETALLE -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose">&times;</button>
+        <div class="lightbox-content">
+            <img id="lightboxImg" src="" alt="Vista previa">
+            <div class="lightbox-info">
+                <h3 id="lightboxTitle"></h3>
+                <p id="lightboxDesc"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER / CONTACTO -->
+    <footer id="contacto" class="footer">
+        <div class="container footer-content">
+            <h2>¿Tienes un proyecto en mente?</h2>
+            <p>Hablemos y hagamos realidad tu próxima gran idea visual.</p>
+            <a href="mailto:oliviacguzant@gmail.com" class="btn btn-primary">¡Contáctame!</a>
+            
+            <div class="social-links">
+                <a href="https://web.whatsapp.com/send?phone=525531776742&text=Hola%20Olivia,%20vi%20tu%20portafolio%20y%20me%20interesa%20tu%20trabajo" target="_blank">WhatsApp</a>
+                <a href="https://www.instagram.com/liv.onee_san" target="_blank">Instagram</a>
+                <a href="https://mx.linkedin.com/in/olivia-guzmán-antonio-5408932a2?trk=people-guest_people_search-card" target="_blank">LinkedIn</a>
+            </div>
+            <p class="copyright">&copy; 2026 Olivia Canela Guzmán Antonio. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Script Principal -->
+    <script src="js/main.js"></script>
+</body>
+</html>
